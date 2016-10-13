@@ -1,0 +1,13 @@
+block footer
+	.inner
+		.footer__logo.logo
+			a: img(src="img/template/logo.png")
+		.footer__menu
+				ul
+					- list = ["Услуги", "Прайс", "Лицензии","Сотрудничество", "Вопрос-ответ", "Статьи"]
+					each item in list
+						li
+							a(href="#") #{item}
+		.footer__copyright.copyright
+			| &copy; 2006–2016 Авангард.
+

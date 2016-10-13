@@ -1,0 +1,10 @@
+header
+  height: 120px
+  width: 100%
+  flex: 0 0 auto
+  //Стили после включения верхней фиксированной панели
+  &
+    @include breakpoint($mobile)
+      margin-top: 40px
+.logo
+  @extend %opacity

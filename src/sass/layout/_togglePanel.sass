@@ -1,0 +1,130 @@
+$colorToogle: #328D56
+$colorLink: #fff
+$colorButton: #9600ff
+
+//Header-top styles
+.header__top
+  height: 40px
+  background: #ccc
+  display: none
+  position: fixed
+  z-index: 23
+  top: 0
+  width: 100%
+  &
+    @include breakpoint($mobile)
+      display: block
+  .inner
+    height: 40px
+
+
+//Overlay styles
+.overlay
+  max-height: 0
+  overflow: hidden
+  opacity: 0
+  background-color: rgba(0, 0, 0, 0.7)
+  transition: opacity 0.4s, visibility 0.4s linear 0.4s
+  visibility: visible
+.overlay--active
+  max-height: 100%
+  height: 100%
+  width: 100%
+  opacity: 1
+  cursor: pointer
+  z-index: 21
+  position: fixed
+  top: 0
+.fixed-content
+  overflow: hidden
+
+/*Toogle main-style*/
+span.toggle
+  height: 25px
+  width: 30px
+  display: block
+  position: absolute
+  left: 20px
+  top: 8px
+  cursor: pointer
+.toggle__line--wrapper
+  width: 100%
+  height: 100%
+.toggle__line--wrapper em
+  display: block
+  transition: 800ms ease all
+  position: absolute
+  left: 0
+  width: 100%
+  height: 5px
+  top: 10px
+  background: $colorToogle
+  &:first-child
+    top: 0
+  &:last-child
+    top: 20px
+/*Toogle animate-style*/
+em.toggle__line--first.active, em.toggle__line--three.active
+  transform: rotateZ(45deg)
+  transition: 800ms ease all
+  top: 10px
+em.toggle__line--three.active
+  transform: rotateZ(-45deg)
+.toggle__line--wrapper em
+  position: absolute
+  top: 10px
+  &.toggle__line--three.active
+    top: 10px
+.toggle__line--wrapper em.toggle__line--two.active
+  transform: rotateZ(45deg)
+  opacity: 0
+  transition: 400ms ease all
+  
+/*Animate*/
+@-webkit-keyframes animate
+  15%
+    -webkit-transform: translateX(3px)
+    transform: translateX(3px)
+  30%
+    -webkit-transform: translateX(-3px)
+    transform: translateX(-3px)
+  50%
+    -webkit-transform: translateX(2px)
+    transform: translateX(2px)
+  65%
+    -webkit-transform: translateX(-2px)
+    transform: translateX(-2px)
+  80%
+    -webkit-transform: translateX(2px)
+    transform: translateX(2px)
+  100%
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+
+@keyframes animate
+  15%
+    -webkit-transform: translateX(3px)
+    transform: translateX(3px)
+  30%
+    -webkit-transform: translateX(-3px)
+    transform: translateX(-3px)
+  50%
+    -webkit-transform: translateX(2px)
+    transform: translateX(2px)
+  65%
+    -webkit-transform: translateX(-2px)
+    transform: translateX(-2px)
+  80%
+    -webkit-transform: translateX(2px)
+    transform: translateX(2px)
+  100%
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+  
+.animate
+  -webkit-animation: animate 1500ms ease
+  animation: animate 1500ms ease
+  -webkit-animation-iteration-count: 1
+  animation-iteration-count: 1
+/*Animate*/
+/*Toogle end-styles*/

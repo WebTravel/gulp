@@ -1,0 +1,8 @@
+extends ./layout/base.pug
+include ./layout/header.pug
+include ./layout/menu.pug
+block PageBread
+  li.breadcrumbs__item Страница не найдена
+block content
+  include ./layout/not_found.pug
+include ./layout/footer.pug

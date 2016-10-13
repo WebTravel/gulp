@@ -1,0 +1,39 @@
+@import utils/breakpoint
+
+.flex
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+.jcsb
+  justify-content: space-between
+.aic
+  align-items: center
+.float
+  float: left
+.center
+  text-align: center
+.right
+  text-align: right
+.left
+  text-align: left
+.last
+  margin-bottom: 0
+.hidden
+  overflow: hidden
+.bb
+  border-bottom: 1px solid
+  &:hover
+    @include breakpoint($desktop)
+      border-bottom: none
+.italic
+  font-style: italic
+.border
+  border: 1px solid $border
+.full
+  width: 100%
+.half
+  width: 50%
+.less-half
+  width: 47.5%

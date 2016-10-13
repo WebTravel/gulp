@@ -1,0 +1,7 @@
+block menu
+	nav.menu
+		ul.menu__list
+			- list = ["Услуги", "Прайс", "Лицензии","Сотрудничество", "Вопрос-ответ", "Статьи", "Клиенты", "Вакансии", "Контакты"]
+			each item in list
+				li.menu__item
+					a.menu__link(href="#") #{item}

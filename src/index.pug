@@ -1,0 +1,9 @@
+extends ./layout/base.pug
+block variables 
+  - var pageClass = 'index'
+include ./layout/header.pug
+include ./layout/menu.pug
+block breadcrumb
+block content
+  |контент главной страницы
+include ./layout/footer.pug

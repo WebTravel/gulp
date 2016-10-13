@@ -1,0 +1,26 @@
+.content
+  padding-bottom: $content_padding
+  flex: 1 0 auto
+  .inner
+    @include clearfix
+.content__text
+  a
+    color: $link
+  p
+    line-height: 1.5
+    margin-bottom: $mbp
+    &:last-child
+      margin-bottom: 0
+  ul, ol
+    padding-left: 25px
+    list-style: none
+
+    li
+      margin-bottom: $mbli
+      &:before
+        display: inline-block
+        content: '\2022'
+        margin-right: 10px
+        color: $link
+.maincol
+  width: calc(100% - $aside_width - $aside_indent)

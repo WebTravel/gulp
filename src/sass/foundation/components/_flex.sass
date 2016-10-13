@@ -1,0 +1,19 @@
+=foundation-flex-classes
+  // Horizontal alignment using justify-content
+  @each $hdir, $prop in map-remove($-zf-flex-justify, left)
+    .align-#{$hdir}
+      +flex-align($x: $hdir)
+
+  // Vertical alignment using align-items and align-self
+  @each $vdir, $prop in $-zf-flex-align
+    .align-#{$vdir}
+      +flex-align($y: $vdir)
+
+    .align-self-#{$vdir}
+      +flex-align-self($y: $vdir)
+
+  // Source ordering
+  +-zf-each-breakpoint
+    @for $i from 1 through 6
+      .#{$-zf-size}-order-#{$i}
+        +flex-order($i)

@@ -1,0 +1,11 @@
+.breadcrumbs
+  margin-bottom: 30px
+.breadcrumbs__list
+  flex-wrap: wrap
+.breadcrumbs__link
+  &:not(:last-child)
+    &:after
+      content: '/'
+      margin: 0 5px
+      display: inline-block
+

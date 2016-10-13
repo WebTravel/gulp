@@ -1,0 +1,23 @@
+@import breakpoint
+
+%opacity
+  transition: 0.4s ease all
+  cursor: pointer
+  &:hover
+    @include breakpoint($desktop)
+      opacity: 0.8
+      transition: 0.4s ease all
+
+%hover
+  &:hover
+    @include breakpoint($desktop)
+      color: $link
+
+%center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+%buttonColor
+  background: $buttonBg

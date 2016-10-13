@@ -1,0 +1,54 @@
+doctype html
+html
+	head
+		meta(http-equiv="Content-Type",content="text/html; charset=UTF-8")
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title
+		meta(description='' content='')
+		meta(keywords='' content='')
+		link(rel="stylesheet" href="css/screen.css")
+		link(rel='icon', href='/favicon.ico')
+	block variables
+	body(class= pageClass)
+		header
+			block header
+		.menu
+			.inner
+				block menu
+		.content
+			.inner.flex.jcsb
+				block leftMenu
+				.maincol
+					block breadcrumb
+						nav.breadcrumbs.flex
+							a.breadcrumbs__link(href="/") Главная
+							block PageBread
+								span.breadcrumbs__item Сюда пишем свою страницу (или блок страниц)
+					section.content__text
+						block content
+		footer
+			block footer
+		//- кнопка scrollup, которая выполняет функцию "Наверх", работает со скриптом scrollup.js
+		#scrollup
+		.overlay
+		
+		//- подключение jquery 3.1.1
+		script(src="js/jquery.min.js")
+		//- подключение определения устройств
+		script(src="js/device.js")
+		//- подключение слайдера (отключаем, если не нужен)
+		script(src="js/jquery.bxslider.min.js")
+		//- подключение галереи Touch (отключаем, если не нужен)
+		script(src="js/touch.js")
+		//- подключение галереи lightgallery (отключаем, если не нужен)
+		script(src="js/lightgallery.min.js")
+		//- подключение Custom Scrollbar
+		script(src="js/jquery.mCustomScrollbar.concat.min.js")
+		//- Подключение адаптивного мобильного меню (отключаем, если не нужен)
+		script(src="js/mobileMenu.js")
+		//- подключение скрипта, который выполняет Scroll вверх на кнопку
+		script(src="js/scrollup.js")
+		//- подключение адаптивных таблиц
+		script(src="js/responsive-tables.js")
+		//- подключение файла скриптов
+		script(src="js/scripts.js")
