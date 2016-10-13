@@ -1,0 +1,19 @@
+{
+    "name": "Rugoals/rockform",
+    "description": "Simple ajax contact form",
+    "license": "Apache 2.0",
+    "config": {
+       "vendor-dir": "backend/lib"
+    },
+    "authors": [
+        {
+            "name": "Rugoals",
+            "email": "rugoals@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.17",
+        "phpmailer/phpmailer": "^5",
+        "twig/twig": "^1"
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "rockform",
+  "version": "3.12.0",
+  "authors": [
+    "Rugoals <rugoals@gmail.com>"
+  ],
+  "license": "Apache2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-form": "https://github.com/Rockstar-code/form.git",
+    "jquery": "1.12.4",
+    "jquery-mask-plugin": "~1",
+    "jquery-ui": "^1.11.4"
+  }
+}
